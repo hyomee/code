@@ -1,3 +1,5 @@
+package behaviorPsrameter;
+
 class Car {
   private String name;
   private String color;
@@ -21,13 +23,6 @@ class Car {
     return company;
   }
 
-  public static boolean isColorBlack(Car car) {
-    return Constant.COLOR_BLACK.equals(car.getColor());
-  }
-
-  public static boolean isCompanySamsung(Car car) {
-    return Constant.COMPANY_SAMSUNG.equals(car.getCompany());
-  }
 
   @Override
   public String toString() {
