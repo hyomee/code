@@ -11,6 +11,7 @@ public class BehaviorPsrameterMain {
     cars.add(new Car("SM5", "검정", "삼성"));
     cars.add(new Car("SM5", "흰색", "삼성"));
 
+
     CarService carService = new CarService();
 
     List<Car> carBlacks = carService.filterCar(cars, new CarBlankColor());
@@ -20,5 +21,21 @@ public class BehaviorPsrameterMain {
     List<Car> carSamsungs = carService.filterCar(cars, new CaeCompanySamsung());
     System.out.println("-------------------------------");
     System.out.println(carSamsungs.toString());
+
+    // 익명 함수 사용
+    List<Car> aonymousCar = carService.filterCar(cars, new CarPredicate() {
+      @Override
+      public boolean test(Car car) {
+        return "소나타".equals(car.getName());
+      }
+    });
+
+    System.out.println("-------------------------------");
+    System.out.println(aonymousCar.toString());
+
+    // 람다 사용
+    List<Car> lamdaCar = carService.filterCar(cars, (Car car)->"소나타".equals(car.getName()));
+    System.out.println("-------------------------------");
+    System.out.println(lamdaCar.toString());
   }
 }

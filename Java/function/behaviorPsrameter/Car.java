@@ -1,11 +1,11 @@
 package behaviorPsrameter;
 
-class Car {
+public class Car {
   private String name;
   private String color;
   private String company;
 
-  Car(String name, String color, String company) {
+  public Car(String name, String color, String company) {
     this.name = name;
     this.color = color;
     this.company = company;
