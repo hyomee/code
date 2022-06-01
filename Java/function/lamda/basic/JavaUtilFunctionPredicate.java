@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class JavaUtilFunction {
+public class JavaUtilFunctionPredicate {
 
   public static void main(String... args) {
     List<Car> cars = new ArrayList<>();
